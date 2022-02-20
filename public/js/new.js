@@ -22,9 +22,9 @@ const newPostHandler = async (event) => {
       } else {
         alert("Failed to create new post.");
       }
-    }
 
-    document.location.replace('/dashboard');
+      document.location.replace('/dashboard');
+    }
   };
 
   document

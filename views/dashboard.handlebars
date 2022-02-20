@@ -7,11 +7,11 @@
           <div class="col-md-8">
             <h1>{{post.title}}</h1>
             <h4>{{post.text}}</h4>
-            <h6>Posted by {{post.user.name}} on {{post.date_created}}</h6>
+            <h6>You posted this on {{post.date_created}}</h6>
             <h6>{{post.comment}}</h6>
           </div>
           <div class="col-md-4">
-            <button class="btn btn-sm" data-id="{{post.id}}">Add Comment</button>
+            <button class="btn btn-sm" data-id="{{post.id}}">Delete Post</button>
           </div>
         </div>
       {{/each}}
@@ -22,3 +22,5 @@
     <a class="btn" type="submit" href="/new">+ Add Post</a>
   </div>
 </div>
+
+<script src="./js/dashboard.js"></script>
