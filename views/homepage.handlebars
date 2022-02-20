@@ -5,11 +5,10 @@
       {{#each posts as |post|}}
         <div class="row mb-2">
           <div class="col-md-8">
+            <h1>{{post.title}}</h1>
             <h4>{{post.text}}</h4>
-            <h6>Posted by {{post.user.name}} on {{post.date_created}}</h4>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-sm " data-id="{{post.id}}">Add Comment</button>
+            <h6>Posted by {{post.user.name}} on {{post.date_created}}</h6>
+            <h6>{{post.comment}}</h6>
           </div>
         </div>
       {{/each}}

@@ -1,13 +1,16 @@
 [
     {
+        "title": "Title 1",
         "text": "Hello, this is a sentence.",
         "user_id": 1
     },
     {
+        "title": "Title 2",
         "text": "Hello, this is also a sentence.",
         "user_id": 2
     },
     {
+        "title": "Title 3",
         "text": "Hello, this is a 3rd sentence.",
         "user_id": 2
     }

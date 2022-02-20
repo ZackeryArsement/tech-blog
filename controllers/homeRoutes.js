@@ -6,25 +6,15 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   try{  
     const postData = await Post.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+      include: [{ model: User }, { model: Comment }],
+     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
   
-    if (req.session.logged_in) {
-      res.render("homepage", {
-        posts,
-        logged_in: req.session.logged_in,
-      });
-      return;
-    } else {
-      res.redirect("/login");
-    }
+    res.render("homepage", {
+      posts,
+      logged_in: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -32,18 +22,37 @@ router.get("/", async (req, res) => {
 
 });
 
-// get the user's post
-router.get("/dashboard", withAuth, async (req, res) => {
+// Get the default 'new-post' page
+router.get("/new", withAuth, async (req, res) => {
   try {
-    const userData = await Post.findByPk(req.session.user_id, {
+    const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Post, model: Comment, model: User}],
     });
 
     const user = userData.get({ plain: true });
 
-    res.render("dashboard", {
+    res.render("new", {
       ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// get the user's post
+router.get("/dashboard", withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findAll({
+      where: {
+        id: req.session.user_id
+      },
+    });
+
+    const posts = postData.map((post) => post.get({ plain: true }));
+
+    res.render("dashboard", {
+      ...posts,
       logged_in: true,
     });
   } catch (err) {
