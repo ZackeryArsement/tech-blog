@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-auto" id="post-list">
+    {{#if comments.length}}
+      <h3>Global Post</h3>
+      {{#each comments as |comment|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4>{{comment.text}}</h4>
+            <h6>Posted by {{post.user.name}} on {{post.date_created}}</h6>
+            <h6>{{commet.text}}</h6>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <h3>There are no comments for this post!</h3>
+    {{/if}}
+  </div>
+</div>

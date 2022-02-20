@@ -3,17 +3,23 @@ const { User, Post, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // Look at specific post
-router.post("/:id", withAuth, async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
+    console.log('tried')
     try {
-        const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ["password"] },
-        });
+        const commentData = await Comment.findAll({
+            where: {
+              post_id: req.params.id,
+            },
+            include: {
+                model: Post,
+            },
+          });
     
-        const user = userData.get({ plain: true });
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
     
-        res.render("sentence", {
-        ...user,
-        logged_in: true,
+        res.render("post", {
+            comments,
+            logged_in: true,
         });
     } catch (err) {
         res.status(500).json(err);

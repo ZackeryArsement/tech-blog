@@ -18,12 +18,10 @@ const newPostHandler = async (event) => {
         headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-        // document.location.replace(`/dashboard`);
+        document.location.replace(`/dashboard`);
       } else {
         alert("Failed to create new post.");
       }
-
-      document.location.replace('/dashboard');
     }
   };
 
