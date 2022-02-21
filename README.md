@@ -2,17 +2,15 @@
 
 # tech-blog
 
-Title: ***E-Commerce Back End*** \
+Title: ***Tech Blog*** \
 Developer: **Zackery Arsement** \
-Deployment Date: 2/10/2022 \
+Deployment Date: 2/21/2022 \
 For: UT JavaScript Coding Bootcamp
 
 # Access Project
 
-- ### [Github Repository](https://github.com/ZackeryArsement/e-commerce-back-end)
-- ### [Server Start Up Walkthrough](https://watch.screencastify.com/v/7lwFBC7MW909a4pP8iWn)
-- ### [GET and POST Walkthrough](https://watch.screencastify.com/v/36KavCR3cGAEGnZBT4Ku)
-- ### [DELETE and PUT Walkthrough](https://watch.screencastify.com/v/iuHCaMWQQmuqxybDZMF9)
+- ### [Github Repository](https://github.com/ZackeryArsement/tech-blog)
+- ### [Deployed Application](https://watch.screencastify.com/v/7lwFBC7MW909a4pP8iWn)
 
 # Table of Contents
 
