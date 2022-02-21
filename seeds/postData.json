@@ -1,17 +1,17 @@
 [
     {
-        "title": "Title 1",
-        "text": "Hello, this is a sentence.",
+        "title": "Apple is better that Android",
+        "text": "Apple phones are way more user friendly than android phones.",
         "user_id": 1
     },
     {
-        "title": "Title 2",
-        "text": "Hello, this is also a sentence.",
+        "title": "Android is better than Apple",
+        "text": "Apple phones are terrible. GET AN ANDROID!",
         "user_id": 2
     },
     {
-        "title": "Title 3",
-        "text": "Hello, this is a 3rd sentence.",
+        "title": "Mac's are a bad computer",
+        "text": "If you get a PC DO NOT get a Mac. Windows run so much faster.",
         "user_id": 2
     }
 ]
