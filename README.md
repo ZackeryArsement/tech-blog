@@ -10,7 +10,7 @@ For: UT JavaScript Coding Bootcamp
 # Access Project
 
 - ### [Github Repository](https://github.com/ZackeryArsement/tech-blog)
-- ### [Deployed Application](https://watch.screencastify.com/v/7lwFBC7MW909a4pP8iWn)
+- ### [Deployed Application](https://tech-blog-zja.herokuapp.com/)
 
 # Table of Contents
 
@@ -26,32 +26,25 @@ For: UT JavaScript Coding Bootcamp
 * [MySQL](https://www.mysql.com/)
 * [Sequelize](https://sequelize.org/)
 * [Express.js](https://expressjs.com/)
-* [Insomnia](https://insomnia.rest/)
+* [Heroku](https://heroku.com/)
+* [Handlebars](https://handlebarsjs.com/)
 
 # Summary:
 
-![Insomnia Data Example](https://github.com/ZackeryArsement/e-commerce-back-end/blob/main/Assets/e-commerce-insomnia-example.png)
+![Homepage of Tech-Blog](https://github.com/ZackeryArsement/tech-blog/blob/main/public/images/tech-blog-homepage.png)
 
-* The ***E-Commerce Back End*** provides the user with an e-commerce database.
-* To initialize the database the user logs into the MySQL Shell, through the db folder, using the command below: 
-```
-mysql -u root -p
-```
-* The user seeds the database by entering the below command in the main folder:
-```
-node ./seeds/index.js
-```
-* With the database seeded the user can now start the server using the command:
-```
-npm start
-```
-* To interact with our database we use Insomnia with the base URL of '**http://localhost:3001**'
-* We can GET or POST data in our URL by adding '/api/***route name***'
-* If we want to GET, POST, or DELETE a specific piece of data we use the prior URL along with '/***id***'
+* The ***Tech Blog*** provides the user with an online blog to share information and ask questions from other users of our service.
+* There is a homepage that any user can go to, regardless of their login status.
+* The homepage list all the blog post from any user who has accessed the site.
+* You can click on a blog to view any comments it may have.
+* If you are logged in you can add a comment to any post.
+* If you are logged in you can go to your personal dashboard, which displays all your past post.
+* If you are logged in you can add new post or delete old post.
+* When you log out and log back in all your data is still saved to your profile.
 
 # Development:
 
-The ***E-Commerce Back End*** application works by using a sequelize database to store information. This database is coupled with Insomnia to act as a GUI for the user to more easily view and manipulate the database information. The database is created using MySQL and then seeded using sequelize that accesses a local .json file. This application seeds the database using the ***Model*** class, where we determine the parameters we want each value in our database to contain. The Classes are then linked together through Model native methods such as '.belongsTo', '.hasMany', '.belongsToMany', which allows us to see which data values from different tables are associated to one another. To access our data we established routes using express that allow the user to GET, POST, PUT (Update), and DELETE data through Insomnia URLs.
+The ***Tech Blog*** application works by using a sequelize database to store information. This database is coupled with handlebars.js provide a GUI for our web applicaiton. The database is created using MySQL and then manipulated using sequelize that accesses an online database through Heroku. This application's database uses the ***Model*** class, to store information for Users, Posts, and Comments. The Classes are then linked together through Model native methods such as '.belongsTo', '.hasMany', '.belongsToMany', which allows us to see which data values from different tables are associated to one another. To access our data we established routes using express that allow the user to GET, POST, and DELETE data through GUI elements such as buttons and input fields.
 
 # Questions
 
