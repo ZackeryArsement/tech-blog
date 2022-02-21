@@ -109,3 +109,15 @@ h3 {
   visibility: hidden;
   display: none;
 }
+
+.title{
+  background-color: var(--tertiarycolor);
+}
+
+.round{
+  border-radius: 0.5rem;
+}
+
+.round-top{
+  border-radius: 0.5rem 0.5rem 0 0;
+}
